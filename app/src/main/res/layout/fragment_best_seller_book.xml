@@ -8,11 +8,34 @@
     android:layout_margin="6dp">
 
     <TextView
-        android:id="@+id/book_title"
-        android:textAppearance="?attr/textAppearanceListItem"
+        android:id="@+id/book_ranking"
+        android:textSize="16dp"
+        android:typeface="serif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="15dp"
+        />
+
+    <ImageView
+        android:id="@+id/book_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toEndOf="@id/book_ranking"
+        app:layout_constraintTop_toTopOf="@id/book_ranking"
+        />
+
+
+    <TextView
+        android:id="@+id/book_title"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/book_image"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
         />
 
@@ -24,5 +47,28 @@
         app:layout_constraintTop_toBottomOf="@+id/book_title"
         app:layout_constraintStart_toStartOf="parent"
         />
+
+    <TextView
+        android:id="@+id/book_description"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:typeface="normal"
+        android:textColor="#808080"
+        android:maxLines="4"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@+id/book_author"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/buy_button"
+        android:text="BUY ON AMAZON"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#567b95"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/book_description"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

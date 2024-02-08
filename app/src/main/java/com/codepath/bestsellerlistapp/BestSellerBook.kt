@@ -9,6 +9,7 @@ import com.google.gson.annotations.SerializedName
  * object to correctly parse with the gson library.
  */
 class BestSellerBook {
+
     @SerializedName("rank")
     var rank = 0
 
@@ -20,11 +21,16 @@ class BestSellerBook {
     @SerializedName("author")
     var author: String? = null
 
-    //TODO bookImageUrl
+    @SerializedName("book_image")
+    var bookImageUrl: String? = null
 
 
     //TODO description
+    @SerializedName("description")
+    var description: String? = null
 
 
     //TODO-STRETCH-GOALS amazonUrl
+    @SerializedName("amazon_product_url")
+    var amazonUrl: String? = null
 }
